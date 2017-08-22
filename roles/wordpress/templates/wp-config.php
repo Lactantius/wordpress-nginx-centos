@@ -72,13 +72,21 @@ define('WPLANG', '');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /** Disable Automatic Updates Completely */
 define( 'AUTOMATIC_UPDATER_DISABLED', {{auto_up_disable}} );
 
 /** Define AUTOMATIC Updates for Components. */
 define( 'WP_AUTO_UPDATE_CORE', {{core_update_level}} );
+
+/**
+ * Seems to help with automatic updates.
+ * define( 'FS_METHOD', 'direct' );
+ *
+ * Multisite WordPress
+ * define( 'WP_ALLOW_MULTISITE', true );
+ */
 
 /* That's all, stop editing! Happy blogging. */
 

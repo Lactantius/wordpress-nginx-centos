@@ -1,3 +1,6 @@
+Vagrantfile added, with some small changes, by Gerard Keiser
+(gerardkeiser@gmail.com), 2017
+
 Modified by David Beck (techiscool@gmail.com) 2015
 Copyright (C) 2015 Eugene Varnavsky (varnavruz@gmail.com)
 
