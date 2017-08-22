@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
     end
 
     machine.vm.synced_folder "themes", "/srv/wordpress/wp-content/themes",
-      owner: "wordpress", group: "wordpress"
+      mount_options: ["uid=1010,gid=1010"]
 
     machine.vm.provision "ansible" do |ansible|
       ansible.verbose = "v"
