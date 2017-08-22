@@ -32,7 +32,10 @@
   template: src=wp-config.php dest=/srv/wordpress/
 
 - name: Change ownership of WordPress installation
-  file: path=/srv/wordpress/ owner=wordpress group=wordpress state=directory recurse=yes
+  file: path=/srv/wordpress/ owner=wordpress group=wordpress state=directory recurse=yes mode=0755
+
+- name: Ensure files have 644 permissions
+  command: chdir=/srv find . -type f -exec chmod -R 0644 {} \;
 
 - name: install SEManage
   yum: pkg=policycoreutils-python state=present
