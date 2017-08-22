@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
       domain.cpus = 1
     end
 
-    machine.vm.synced_folder "themes", "srv/wordpress/wp-content/themes",
+    machine.vm.synced_folder "themes", "/srv/wordpress/wp-content/themes",
       owner: "wordpress", group: "wordpress"
 
     machine.vm.provision "ansible" do |ansible|
